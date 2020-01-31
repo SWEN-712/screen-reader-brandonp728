@@ -3,107 +3,134 @@
 #Copyright (c) 2011-2017 NVDA Contributors
 #This file is covered by the GNU General Public License.
 
+complexSymbols:
+# identifier	regexp
+# Sentence endings.
+. sentence ending	(?<=[^\s.])\.(?=[\"'”’)\s]|$)
+! sentence ending	(?<=[^\s!])\!(?=[\"'”’)\s]|$)
+? sentence ending	(?<=[^\s?])\?(?=[\"'”’)\s]|$)
+# Phrase endings.
+; phrase ending	(?<=[^\s;]);(?=\s|$)
+: phrase ending	(?<=[^\s:]):(?=\s|$)
 # Others
 decimal point	(?<![^\d -])\.(?=\d)
 in-word '	(?<=[^\W_])['’]
+negative number	(?<!\w)[-−]{1}(?=[$£€¥.]?\d)
+
+# Java Programming
+/*  multi line comment beginning
+*   multi line comment continue
+*/  multi line comment end
+//  single line comment all
++=  plus equals
+==  is equal to
+char    character data type all
+this    self reference
+-_- i'm angry
+
+# Math
+decimal point	(?<![^\d -])\.(?=\d)
+double prime	(?<=\d)\''
+prime	(?<=\d)\'
+in-word '	(?<=[^\W_])['’]
 negative number	(?<!\w)-(?=[$£€¥.]?\d)
+# Mathematical complex symbols
+logarithm	log\(
+natural logarithm	ln\(
+power	(?<=\d|\w)\^
+multiplication dot	\⋅
+approximately equal	\≈
+sine	sin\(
+cosine	cos\(
+tangent	tan\(
+cosecant	csc\(
+secant	sec\(
+cotangent	cot\(
+division slash	(?<=\d|\w|\))\/(?=\d|\w|\()
+square	\²
+cube	\³
+permille	\‰
+absolute value	\|(?=\d|\-|\w|\()
+factorial	(?<=\d)\!
+modulo	mod\((?=\d|\-|\w)
+epsilon	\ε
+pi	\π
+identical to	\≡
+not identical to	\≢
+perpendicular	\⊥
+parallel	\∥
+congruent	\≅
+similarity	\~
+proportional	\∝
+triple integral	\∫∫∫
+double integral	\∫∫
+integral	\∫
 
 symbols:
 # identifier	replacement[[	level][	preserve]][	# display name]
 
-# ADDITIONS BY BRANDON PALONIS
-# Java
-\t	indent	all
-=	set to 	all
-"	string	all
-'   character all
-.   property    all
-
-# Java Arithmetic Operators
-+	plus	all
--	minus   all
-*	times	all
-/	divided by	all
-%	modulo	all
-+=	increment and set to	all
--=	decrement and set to	all
-++  incremented by one and set equal to itself  all
---  decremented by one and set equal to itself  all
-
-# Java Logical operators
-==	is equal to
-!=	is not equal to
-<	is less than
->	is greater than
-<=	is less than or equal to
->=	is greater than or equal to
-!	logical not
-||  logical or
-&&  logical and
-
-# Java Data Types
-String  string data type    all
-int integer data type   all
-double  double data type    all
-char    character data type all
-Object  object data type    all
-
-# Java Comments
-/*	multi line comment begin	all
-*/  multi line comment end	all
-//  single line comment
-
-# Java Keywords
-public  public access  all
-protected   protected access   all
-private private access  all
-static  static declaration  all
-return  return statement    all
-for for loop    all
-while   while loop all
-if  if statement    all
-else    else statement  all
-new new variable    all
-null    null value  all
-
-# ADDITIONS END
-
-
 # Complex symbols
+. sentence ending	dot	all	always
+! sentence ending	bang	all	always
 ? sentence ending	question	all	always
 ; phrase ending	semi	most	always
+: phrase ending	colon	most	always
 decimal point		none	always
 in-word '	tick	all	norep
 negative number	minus	none	norep
 
+
+
 # Whitespace
 \0	blank	char	# null
-
+\t	tab
 \n	line feed	char
 \f	page break	none
 \r	carriage return	char
  	space	char
- 	space	char	# no-break space
+ 	space	char	# no-break space
 
 # Standard punctuation/symbols
+!	bang	all
+"	quote	most
+\#	number	some
 $	dollar	all	norep
 £	pound	all	norep
 €	euro	all	norep
 ¢	Cents	all	norep
 ¥	Yen	all	norep
 ₹	Rupee	some	norep
+%	percent	some
 &	and	some
+'	tick	all
+(	left paren	most	always
+)	right paren	most	always
+*	star	some
 +	plus	some
+−	minus	some
 ,	comma	all	always
 -	dash	most
+.	dot	some
+/	slash	some
+:	colon	most	norep
 ;	semi	most
+<	less	some
+>	greater	some
+=	equals	some
 ?	question	all
 @	at	some
+[	left bracket	most
+]	right bracket	most
 \\	backslash	most
 ^	caret	most
 _	line	most
 `	graav	most
+{	left brace	most
+}	right brace	most
+|	bar	most
 ~	tilda	most
+
+
 
 # Other characters
 •	bullet	some
