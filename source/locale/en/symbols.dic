@@ -13,64 +13,64 @@ symbols:
 
 # ADDITIONS BY BRANDON PALONIS
 # Java
-\t	indent	all
-=	set to 	all
-"	string	all
-'   character all
-.   property    all
+#\t	indent	none	norep
+=	set to	none	norep	
+"	string	none	norep
+'   character	none	norep
+.   property	none	norep
 
 # Java Arithmetic Operators
-+	plus	all
--	minus   all
-*	times	all
-/	divided by	all
-%	modulo	all
-+=	increment and set to	all
--=	decrement and set to	all
-++  incremented by one and set equal to itself  all
---  decremented by one and set equal to itself  all
++	plus	none	norep
+-	minus	none	norep
+*	times	none	norep
+/	divided by	none	norep
+%	modulo	none	norep
++=	increment and set to	none	norep
+-=	decrement and set to	none	norep
+++  incremented by one and set equal to itself	none	norep
+--  decremented by one and set equal to itself	none	norep
 
 # Java Logical operators
-==	is equal to
-!=	is not equal to
-<	is less than
->	is greater than
-<=	is less than or equal to
->=	is greater than or equal to
-!	logical not
-||  logical or
-&&  logical and
+==	is equal to	none	norep
+!=	is not equal to	none	norep
+<	is less than	none	norep
+>	is greater than	none	norep
+<=	is less than or equal to	none	norep
+>=	is greater than or equal to	none	norep
+!	logical not	none	norep
+||  logical or	none	norep
+&&  logical and	none	norep
 
 # Java Data Types
-String  string data type    all
-int integer data type   all
-double  double data type    all
-char    character data type all
-Object  object data type    all
+String  string data type	none	norep
+int integer data type	none	norep
+double  double data type	none	norep
+char    character data type	none	norep
+Object  object data type	none	norep
 
 # Java Comments
-/*	multi line comment begin	all
-*/  multi line comment end	all
-//  single line comment
+/*	multi line comment begin	none	norep
+*/  multi line comment end	none	norep
+//  single line comment	none	norep
 
 # Java Keywords
-public  public access  all
-protected   protected access   all
-private private access  all
-static  static declaration  all
-return  return statement    all
-for for loop    all
-while   while loop all
-if  if statement    all
-else    else statement  all
-new new variable    all
-null    null value  all
+public  public access	none	norep
+protected   protected access	none	norep
+private private access	none	norep
+static  static declaration	none	norep
+return  return statement	none	norep
+for for loop	none	norep
+while   while loop	none	norep
+if  if statement	none	norep
+else    else statement	none	norep
+new new variable	none	norep
+null    null value	none	norep
 
 # ADDITIONS END
 
 
 # Complex symbols
-? sentence ending	question	all	always
+? sentence ending   question	all	always
 ; phrase ending	semi	most	always
 decimal point		none	always
 in-word '	tick	all	norep
